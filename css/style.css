@@ -1,3 +1,8 @@
+/*body{
+   background-repeat: no-repeat;
+   background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1523294587484-bae6cc870010?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+}*/
 header:hover{
     font-size: larger;
 }
@@ -30,9 +35,9 @@ a{  clear: both;
     text-decoration: none;
     color: rgb(114, 11, 11);
 }
-article:hover{
+#p2:hover{
     
-    font-size: large;
+    font-size: xx-large;
 }
 a:hover{
     color: black;
@@ -58,19 +63,24 @@ a:hover{
     border-radius: 5px;
     width: 1470px;
 }
-#chi1{
-       inline-size: 350px;     
+#chi1{ 
+     background-color: rgb(114, 11, 11);
+       inline-size: 350px;
+          
         }
 #chi{
     float: left;
     text-align: center;
     border-radius: 1px;
     margin: 15px;
-    color: wheat;
+    color:  rgb(114, 11, 11);
     position: relative;
-    font-size: larger;
+    font-size: x-large;
+    font-weight: bolder;
     size: 50px;
-    background-color: rgb(114, 11, 11);
+    padding: 5px;
+    background-color: wheat;
+    
     
 }
 #cut1,.s1{
@@ -99,5 +109,25 @@ font-weight: bold;}
   margin-left: 550px;
  padding: 5px;
  background-color: rgb(114, 11, 11);
+
+}
+
+fieldset
+{
+    
+color: white;
+font-size: larger;
+font-weight: bold;
+background-repeat: no-repeat;
+background-size: cover;
+ background-image: url(https://envato-shoebox-0.imgix.net/3843/2d50-344d-432d-90fc-16a2c111154d/T13A1629.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=008c8a14dbe12855da73518eafed2824);
+
+
+}
+legend{
+    background-color: white;
+   color: rgb(37, 36, 35);
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }

@@ -128,3 +128,17 @@ d.render();
 e.render();
 creatFooter(a,b,c,d,e);
 
+function myfunction()
+{  a=document.getElementById("lname");
+   b=document.getElementById("min");
+   b=parseInt(b);
+   c=document.getElementById("max");
+   c=parseInt(c);
+   d=document.getElementById("av");
+   d=parseInt(d);
+   var add = new Location(a,b,c,d);
+  add.getNum();
+  add.getcookiesPerHour();
+  add.render();
+
+}
