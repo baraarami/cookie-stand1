@@ -1,0 +1,103 @@
+header:hover{
+    font-size: larger;
+}
+h1,h2{
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(236, 208, 165);
+    color: rgb(114, 11, 11);
+    margin-bottom: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#p1{  
+    text-align: center;
+    background-color: rgb(236, 208, 165);
+    color: rgb(114, 11, 11);
+    margin-top: 0%;
+
+}
+article{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(236, 208, 165);
+    color: rgb(114, 11, 11);
+    padding: 10px;
+    float: right;
+    border-radius: 5px;
+
+
+}
+a{  clear: both;
+    text-decoration: none;
+    color: rgb(114, 11, 11);
+}
+article:hover{
+    
+    font-size: large;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+#salmon{
+   width: 70%;
+
+}
+#p2,#p3{
+    color: rgb(114, 11, 11);
+    text-align: center;
+    margin-top: 40px;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: rgb(236, 208, 165);
+    padding: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#fam{ 
+    padding: 10px;
+    background-color:  rgb(114, 11, 11);
+    border-radius: 5px;
+    width: 1470px;
+}
+#chi1{
+       inline-size: 350px;     
+        }
+#chi{
+    float: left;
+    text-align: center;
+    border-radius: 1px;
+    margin: 15px;
+    color: wheat;
+    position: relative;
+    font-size: larger;
+    size: 50px;
+    background-color: rgb(114, 11, 11);
+    
+}
+#cut1,.s1{
+    clear: both;
+    height: 110px;
+    width: 200px;
+    margin-top: 5px;
+}
+#cut,.s{
+    
+    background-color: rgb(114, 11, 11);
+    float: left;
+    text-align: center;
+    border-radius: 1px;
+    margin: 40px;
+    color: wheat;
+    position: relative;
+    font-size: large;
+    
+}
+h2{clear: both;
+padding: 20px;
+font-weight: bold;}
+#T{
+    margin: 15px;
+  margin-left: 550px;
+ padding: 5px;
+ background-color: rgb(114, 11, 11);
+
+}
