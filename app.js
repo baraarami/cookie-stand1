@@ -1,185 +1,130 @@
-var Seattle={
-    minCustomerHour :26,
-    maxCustomerHour :65,
-    average : 6.3,
-    hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-    cusPerHour : [],
-    cookiesPerHour : [],
-    total : 0,
-    getNum : function( ) {
-        console.log("Seattle");
-        document.writeln("Seattle");
-        document.writeln("<br>");
+var tableEl = document.getElementById("table1");
+workHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+function Location(lname,minCustomerHour, maxCustomerHour, average) {  this.lname=lname;
+    this.lname=lname;
+    this.minCustomerHour = minCustomerHour;
+    this.maxCustomerHour = maxCustomerHour;
+    this.average = average;
+    this.hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+    this.cusPerHour = [];
+    this.cookiesPerHour = [];
+    this.total = 0;
+    this.getNum = function( ) {
       for (var i = 0; i < this.hours.length; i++){
         this.cusPerHour.push(getRandomInt(this.minCustomerHour,this.maxCustomerHour));
-        document.writeln(this.hours[i]+":",this.cusPerHour[i]+"cookies");
-        document.write("<br>");
-        console.log(this.hours[i]+":",this.cusPerHour[i]+"cookies");}
-       
-    },
+       }
+    };
     
-    getcookiesPerHour : function( ) {
+    this.getcookiesPerHour = function( ) {
       for (var i = 0; i < this.hours.length; i++){
         this.cookiesPerHour.push(Math.ceil(this.average * this.cusPerHour[i]));
-        this.total += this.cusPerHour[i];
+        this.total += this.cookiesPerHour[i];
     }
-    document.writeln("total : "+this.total);
-    document.write("<br>");
-    console.log("total : "+this.total);}
+};
   
-  };
-  function getRandomInt(min, max) {
-      
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
   }
-Seattle.getNum();
-Seattle.getcookiesPerHour();
+  function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
+    }
 
-var Tokyo={
-    minCustomerHour :3,
-    maxCustomerHour :24,
-    average : 1.2,
-    hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-    cusPerHour : [],
-    cookiesPerHour : [],
-    total : 0,
-    getNum : function( ) {
-        console.log("tokyo");
-        document.writeln("Tokyo");
-        document.write("<br>");
-      for (var i = 0; i < this.hours.length; i++){
-        this.cusPerHour.push(getRandomInt(this.minCustomerHour,this.maxCustomerHour));
-        document.writeln(this.hours[i]+":",this.cusPerHour[i]+"cookies");
-        document.write("<br>");
-        console.log(this.hours[i]+":",this.cusPerHour[i]+"cookies");}
-       
-    },
-    
-    getcookiesPerHour : function( ) {
-      for (var i = 0; i < this.hours.length; i++){
-        this.cookiesPerHour.push(Math.ceil(this.average * this.cusPerHour[i]));
-        this.total += this.cusPerHour[i];
-    }
-    document.writeln("total : "+this.total);
-    document.write("<br>");
-    console.log("total : "+this.total);}
-  
-  };
-  function getRandomInt(min, max) {
-      
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
-  }
-Tokyo.getNum();
-Tokyo.getcookiesPerHour();
+    var a = new Location("Seattle",26, 65, 6.3);
+    var b = new Location("Tokyo",3, 24, 1.2);
+    var c = new Location("Dubai",11, 38, 3.7);
+    var d = new Location("Paris",20, 38, 2.3);
+    var e = new Location("Lima",2, 16, 4.6);
 
-var Dubai={
-    minCustomerHour :11,
-    maxCustomerHour :38,
-    average : 3.7,
-    hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-    cusPerHour : [],
-    cookiesPerHour : [],
-    total : 0,
-    getNum : function( ) {
-        console.log("Dubai ");
-        document.writeln("Dubai");
-        document.write("<br>");
-      for (var i = 0; i < this.hours.length; i++){
-        this.cusPerHour.push(getRandomInt(this.minCustomerHour,this.maxCustomerHour));
-        console.log(this.hours[i]+":",this.cusPerHour[i]+"cookies");
-        document.writeln(this.hours[i]+":",this.cusPerHour[i]+"cookies");
-        document.write("<br>");}
-    },
-    
-    getcookiesPerHour : function( ) {
-      for (var i = 0; i < this.hours.length; i++){
-        this.cookiesPerHour.push(Math.ceil(this.average * this.cusPerHour[i]));
-        this.total += this.cusPerHour[i];
-    }
-    
-    document.write("<br>");
-    document.writeln("total : "+this.total);
-    console.log("total : "+this.total);}
+a.getNum();
+a.getcookiesPerHour();
+b.getNum();
+b.getcookiesPerHour();
+c.getNum();
+c.getcookiesPerHour();
+d.getNum();
+d.getcookiesPerHour();
+e.getNum();
+e.getcookiesPerHour();
   
-  };
-  function getRandomInt(min, max) {
-      
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
-  }
-Dubai.getNum();
-Dubai.getcookiesPerHour();
+  /*document.writeln("Seattle",a.hours);
+  document.writeln("br");
+  document.writeln("Tokyo",a.hours);
+  document.writeln("br");
+  document.writeln("Dubai",a.hours);
+  document.writeln("br");
+  document.writeln("Paris",a.hours);
+  document.writeln("br");
+  document.writeln("Lima",a.hours);*/
 
-var Paris={
-    minCustomerHour :20,
-    maxCustomerHour :38,
-    average : 2.3,
-    hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-    cusPerHour : [],
-    cookiesPerHour : [],
-    total : 0,
-    getNum : function( ) {
-        console.log("Paris");
-        document.writeln("Paris");
-        document.write("<br>");
-      for (var i = 0; i < this.hours.length; i++){
-        this.cusPerHour.push(getRandomInt(this.minCustomerHour,this.maxCustomerHour));
-        document.writeln(this.hours[i]+":",this.cusPerHour[i]+"cookies");
-        document.write("<br>");
-        console.log(this.hours[i]+":",this.cusPerHour[i]+"cookies");}
-       
-    },
-    
-    getcookiesPerHour : function( ) {
-      for (var i = 0; i < this.hours.length; i++){
-        this.cookiesPerHour.push(Math.ceil(this.average * this.cusPerHour[i]));
-        this.total += this.cusPerHour[i];
-    }
-    document.writeln("total : "+this.total);
-    document.write("<br>");
-    console.log("total : "+this.total);}
-  
-  };
-  function getRandomInt(min, max) {
-      
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
-  }
-Paris.getNum();
-Paris.getcookiesPerHour();
+function createHeader()
+{    ///create the header of the table
+   var headRow = document.createElement('tr');
+   tableEl.appendChild(headRow) ;
+   var rowEl=document.createElement('th');
+   headRow.appendChild(rowEl);
+   rowEl.textContent="   ";
+   
+   for(var i=0;i<workHours.length;i++){
+    var rowEl1=document.createElement("th");
+    headRow.appendChild(rowEl1);
+    rowEl1.textContent=this.workHours[i];
+   }
+   var rowE2=document.createElement('th');
+   headRow.appendChild(rowE2);
+   rowE2.textContent="Daily-Total";
 
-var Lima={
-    minCustomerHour :2,
-    maxCustomerHour :16,
-    average : 4.6,
-    hours : ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'],
-    cusPerHour : [],
-    cookiesPerHour : [],
-    total : 0,
-    getNum : function( ) {
-        console.log("Lima");
-        document.writeln("Lima");
-        document.write("<br>");
-      for (var i = 0; i < this.hours.length; i++){
-        this.cusPerHour.push(getRandomInt(this.minCustomerHour,this.maxCustomerHour));
-        document.writeln(this.hours[i]+":",this.cusPerHour[i]+"cookies");
-        document.write("<br>");
-        console.log(this.hours[i]+":",this.cusPerHour[i]+"cookies");}
-       
-    },
+
+}
+createHeader();
+///render for table
+ var totalofTotal=0;
+ Location.prototype.render = function(){
+     var totalofTotal=0;
+    var row = document.createElement('tr');
+    tableEl.appendChild(row);
+    var rowData =document.createElement('td');
+    row.appendChild(rowData);
+    rowData.textContent=this.lname;
+
+    for(var i=0;i<workHours.length;i++)
+ {
+    var rowData1 =document.createElement('td');
+    row.appendChild(rowData1);
+    rowData1.textContent=this.cookiesPerHour[i];
+}
+
+var rowData2 =document.createElement('td');
+    row.appendChild(rowData2);
+    rowData2.textContent=this.total;
+
+
+ 
     
-    getcookiesPerHour : function( ) {
-      for (var i = 0; i < this.hours.length; i++){
-        this.cookiesPerHour.push(Math.ceil(this.average * this.cusPerHour[i]));
-        this.total += this.cusPerHour[i];
-    }
-    document.writeln("total : "+this.total);
-    document.write("\n");
-    console.log("total : "+this.total);}
-  
-  };
-  function getRandomInt(min, max) {
-      
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
-  }
-Lima.getNum();
-Lima.getcookiesPerHour();
+}
+function creatFooter()
+{var totalofTotal2=0;
+var row11 = document.createElement('tr');
+tableEl.appendChild(row11);
+var rowData3 =document.createElement('td');
+row11.appendChild(rowData3);
+rowData3.textContent="Total";
+for(var j=0;j<workHours.length;j++){
+
+    for(var i=0;i<arguments.length;i++){
+        totalofTotal+=arguments[i].cookiesPerHour[j];
+        totalofTotal2+=arguments[i].cookiesPerHour[j];}
+        var rowData3 =document.createElement('td');
+        row11.appendChild(rowData3);
+        rowData3.textContent=totalofTotal;
+        totalofTotal=0;}
+
+var rowData3 =document.createElement('td');
+row11.appendChild(rowData3);
+rowData3.textContent=totalofTotal2;
+        
+}
+a.render();
+b.render();
+c.render();
+d.render();
+e.render();
+creatFooter(a,b,c,d,e);
 
