@@ -7,7 +7,7 @@ h1
     font-size: xx-large;
     margin-bottom: 50px;
     padding: 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-family: 'Epilogue', sans-serif;
 }
 
 table{
@@ -39,9 +39,39 @@ table, th, td {
     background-size: cover; 
  }
   a{
-margin-top: 150px;
-    float: left;
-    color: white;
+    margin-top: 10px;
+    color: rgb(114, 11, 11);
     font-size: x-large;
+    background-color: aliceblue;
+    text-decoration: none;
+    margin-left: 680px;
     font-weight: bolder;
+    padding: 10px;
+    border-radius: 5px;
   }
+
+  fieldset
+{
+    
+color: white;
+font-size: larger;
+font-weight: bold;
+
+
+}
+legend{
+    background-color: white;
+   color: rgb(114, 11, 11);
+    font-size: x-large;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#submit{
+ background-color: white;
+ color: rgb(114, 11, 11);
+ font-size: x-large;
+ font-weight: bold;
+ padding: 10px;
+
+}
